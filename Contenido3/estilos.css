@@ -1,0 +1,578 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #bbebff;
+    color: #142B43;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.75;
+}
+
+#encabezado {
+    min-height: 76px;
+    padding: 12px max(6%, calc((100% - 1160px) / 2));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background: #071A33;
+    border-bottom: 1px solid rgba(125, 211, 252, 0.18);
+}
+
+#logotipo {
+    color: #8BDCF5;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+    font-size: 1.65rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+}
+
+#menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#menu a {
+    color: #C5D9E8;
+    font-size: 0.88rem;
+    text-decoration: none;
+}
+
+#menu a:hover,
+#enlace-tema-actual {
+    color: #7DD3FC !important;
+    font-weight: 700;
+}
+
+#contenido {
+    width: min(1120px, 88%);
+    margin: 0 auto;
+}
+
+#portada {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 45px;
+    padding: 68px 0 60px;
+}
+
+#etiqueta-portada,
+#numero-evolucion,
+#numero-habitats,
+#numero-habilidades,
+#numero-datos,
+#numero-generaciones,
+#numero-multimedia {
+    color: #1685B8;
+    font-family: 'Century Gothic', 'Tw Cen MT', Arial, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+}
+
+#titulo-portada {
+    margin: 12px 0 18px;
+    color: #071A33;
+    font-family: 'Bell MT', 'Bell', Georgia, serif;
+    font-size: clamp(2.3rem, 4.5vw, 3.6rem);
+    line-height: 1.12;
+    letter-spacing: -0.04em;
+}
+
+#resumen-portada {
+    max-width: 540px;
+    color: #52677C;
+    font-size: 1.02rem;
+}
+
+#portada-imagen {
+    padding: 12px;
+    border: 1px solid #D7E6F0;
+    border-radius: 14px;
+    background: #FFFFFF;
+    box-shadow: 0 16px 38px rgba(7, 26, 51, 0.08);
+}
+
+#imagen-evolucion {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+}
+
+#pie-imagen-portada {
+    margin: 9px 0 0;
+    color: #718397;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-align: center;
+}
+
+#seccion-evolucion,
+#seccion-habitats,
+#seccion-habilidades,
+#seccion-datos-asombrosos,
+#seccion-generaciones,
+#multimedia {
+    padding: 62px 0;
+    border-top: 1px solid #D9E5EE;
+}
+
+#titulo-evolucion,
+#titulo-habitats,
+#titulo-habilidades,
+#titulo-datos-asombrosos,
+#titulo-generaciones,
+#titulo-multimedia {
+    margin: 6px 0 18px;
+    color: #071A33;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', sans-serif;
+    font-size: clamp(1.7rem, 3vw, 2.35rem);
+    line-height: 1.22;
+    letter-spacing: -0.03em;
+}
+
+#seccion-evolucion p,
+#seccion-habitats p,
+#seccion-habilidades p,
+#seccion-datos-asombrosos p,
+#seccion-generaciones p {
+    color: #385166;
+    margin: 0 0 18px;
+}
+
+#cita-evolucion-1,
+#cita-evolucion-2,
+#cita-evolucion-3,
+#cita-evolucion-4,
+#cita-evolucion-5,
+#cita-habitats-1,
+#cita-habitats-2,
+#cita-hab-1,
+#cita-hab-2,
+#cita-hab-3,
+#cita-hab-4,
+#cita-hab-5,
+#cita-hab-6,
+#cita-hab-7,
+#cita-datos-1,
+#cita-datos-2,
+#cita-datos-3,
+#cita-datos-4,
+#cita-datos-5,
+#cita-datos-6,
+#cita-datos-7 {
+    display: inline;
+    padding: 1px 6px;
+    border-radius: 3px;
+    background: #ffffff;
+    color: #075985;
+    font-size: 0.91em;
+    font-weight: 700;
+    text-decoration-line: underline;
+    text-decoration-color: #0284C7;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+}
+
+#contenedor-tabla-evolucion,
+#contenedor-tabla-habilidades,
+#contenedor-tabla-generaciones {
+    margin: 28px 0;
+    overflow-x: auto;
+    border: 1px solid #0284C7;
+    border-radius: 12px;
+    background: #0A2239;
+    box-shadow: 0 8px 25px rgba(4, 18, 36, 0.32);
+}
+
+#tabla-lineas-evolutivas,
+#tabla-habilidades,
+#tabla-generaciones {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    background: #0A2239;
+}
+
+#tabla-lineas-evolutivas caption,
+#tabla-habilidades caption,
+#tabla-generaciones caption {
+    padding: 16px 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', sans-serif;
+    font-weight: 700;
+    color: #E0F2FE;
+    background: #07192C;
+    border-bottom: 1px solid #1E3A5F;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+#tabla-lineas-evolutivas thead,
+#tabla-habilidades thead,
+#tabla-generaciones thead {
+    background: linear-gradient(90deg, #0C3559 0%, #0369A1 100%);
+}
+
+#tabla-lineas-evolutivas th,
+#tabla-habilidades th,
+#tabla-generaciones th {
+    padding: 14px 20px;
+    color: #BAE6FD;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid #0284C7;
+}
+
+#tabla-lineas-evolutivas td,
+#tabla-habilidades td,
+#tabla-generaciones td {
+    padding: 14px 20px;
+    border-bottom: 1px solid #133150;
+    font-size: 0.92rem;
+    color: #E0F2FE;
+    vertical-align: top;
+}
+
+#tabla-lineas-evolutivas tr:last-child td,
+#tabla-habilidades tr:last-child td,
+#tabla-generaciones tr:last-child td {
+    border-bottom: none;
+}
+
+#tabla-lineas-evolutivas tbody tr:nth-child(odd) td,
+#tabla-habilidades tbody tr:nth-child(odd) td,
+#tabla-generaciones tbody tr:nth-child(odd) td {
+    background: #0B253E;
+}
+
+#tabla-lineas-evolutivas tbody tr:nth-child(even) td,
+#tabla-habilidades tbody tr:nth-child(even) td,
+#tabla-generaciones tbody tr:nth-child(even) td {
+    background: #0F2E4D;
+}
+
+#tabla-lineas-evolutivas tbody tr:hover td,
+#tabla-habilidades tbody tr:hover td,
+#tabla-generaciones tbody tr:hover td {
+    background: #153E66;
+}
+
+
+#bloque-formas-regionales,
+#bloque-mecanica-lluvia {
+    margin-top: 26px;
+    padding: 24px 28px;
+    border-left: 4px solid #0284C7;
+    border-radius: 0 10px 10px 0;
+    background: linear-gradient(to top, #157ba7 0%, #82c6eb 100%);
+}
+
+#titulo-formas-regionales,
+#titulo-mecanica-lluvia,
+#titulo-movimientos {
+    margin: 0 0 10px;
+    color: #0B3157;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+    font-size: 1.15rem;
+}
+
+#bloque-formas-regionales p,
+#bloque-mecanica-lluvia p {
+    margin: 0;
+    color: #dcdcdc;
+}
+
+#bloque-movimientos {
+    margin-top: 28px;
+    padding: 24px 28px;
+    border: 1px solid #DCE8F1;
+    border-radius: 12px;
+    background: #FFFFFF;
+}
+
+#lista-movimientos {
+    margin: 0;
+    padding-left: 20px;
+    color: #385166;
+}
+
+#lista-movimientos li {
+    margin-bottom: 10px;
+    font-size: 0.92rem;
+}
+
+#tarjetas-habitats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-top: 28px;
+}
+
+#tarjeta-oceano,
+#tarjeta-rios,
+#tarjeta-costas,
+#tarjeta-pantanos {
+    padding: 24px;
+    border: 1px solid #DCE8F1;
+    border-radius: 12px;
+    background: #FFFFFF;
+}
+
+#titulo-oceano,
+#titulo-rios,
+#titulo-costas,
+#titulo-pantanos {
+    margin: 0 0 10px;
+    color: #0B3157;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+    font-size: 1.12rem;
+}
+
+#especies-oceano,
+#especies-rios,
+#especies-costas,
+#especies-pantanos {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px dashed #DCE8F1;
+    font-size: 0.88rem;
+    color: #556D84 !important;
+}
+
+#bloques-datos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 28px;
+}
+
+#dato-magikarp,
+#dato-wishiwashi,
+#dato-wailord,
+#dato-volcanion,
+#dato-palkia,
+#dato-kingdra {
+    display: flex;              /* Permite distribuir el contenido verticalmente */
+    flex-direction: column;
+    justify-content: space-between; /* Reparte título y cuerpo para llenar el alto */
+    padding: 22px;
+    border: 1px solid #DCE8F1;
+    border-radius: 12px;
+    background: #FFFFFF;
+}
+
+#titulo-dato-magikarp,
+#titulo-dato-wishiwashi,
+#titulo-dato-wailord,
+#titulo-dato-volcanion,
+#titulo-dato-palkia,
+#titulo-dato-kingdra {
+    margin: 0 0 12px;
+    color: #0B3157;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+    font-size: 1.08rem;
+}
+
+/* Contenedor interno para que float funcione dentro de flex */
+.cuerpo-dato {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente el bloque texto+imagen */
+}
+
+#dato-magikarp p,
+#dato-wishiwashi p,
+#dato-wailord p,
+#dato-volcanion p,
+#dato-palkia p,
+#dato-kingdra p {
+    margin: 0;
+    color: #4B6377;
+    font-size: 0.95rem;       /* Letra ligeramente más grande para llenar mejor */
+    line-height: 1.6;
+    text-align: justify;      /* Alinea ambos márgenes del párrafo */
+}
+
+.icono-dato {
+    float: left;
+    width: 105px;             /* Imagen un poco más grande para equilibrar el espacio */
+    height: 105px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 16px;
+    margin-bottom: 6px;
+}
+
+
+
+
+#texto-multimedia {
+    color: #62778B;
+}
+
+#bloque-audio,
+#bloque-video {
+    margin-top: 20px;
+    padding: 24px;
+    border: 1px solid #DCE8F1;
+    border-radius: 12px;
+    background: #FFFFFF;
+}
+
+#titulo-audio,
+#titulo-video {
+    margin: 0;
+    color: #0B3157;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+}
+
+
+#audio-texto p,
+#video-texto p {
+    margin: 4px 0 14px;
+    color: #62778B;
+    font-size: 0.9rem;
+}
+
+#reproductor-audio {
+    width: 100%;
+}
+
+/* Estilo exclusivo para #bloque-audio (no afecta a #bloque-video) */
+#bloque-audio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+#audio-contenido {
+    flex: 1;
+}
+
+
+#imagen-kyogre {
+    width: 130px;              /* Tamaño equilibrado junto al reproductor */
+    height: auto;
+    flex-shrink: 0;
+    image-rendering: pixelated; /* Mantiene los bordes del pixel art nítidos */
+}
+
+
+#reproductor-video {
+    display: block;
+    width: 100%;
+    max-width: 720px;        /* Limita el ancho para que no se estire tanto */
+    aspect-ratio: 16 / 9;    /* Fuerza la proporción panorámica estándar */
+    margin: 18px auto 0;     /* Centra el video dentro del recuadro blanco */
+    border-radius: 8px;
+    background: #071A33;
+    object-fit: cover;       /* Evita barras negras si el video o póster varía un poco */
+}
+
+#navegacion-paginas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 50px 0 70px;
+    padding: 24px;
+    border: 1px solid #DCE8F1;
+    border-radius: 12px;
+    background: #FFFFFF;
+}
+
+#enlace-anterior,
+#enlace-siguiente {
+    color: #0879AE;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+#enlace-anterior:hover,
+#enlace-siguiente:hover {
+    color: #0284C7;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+#enlace-inicio-portal {
+    color: #5A738A;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+#enlace-inicio-portal:hover {
+    color: #071A33;
+}
+
+#pie {
+    padding: 30px 6%;
+    background: #071A33;
+    color: #C5D9E8;
+    text-align: center;
+}
+
+#volver-arriba {
+    color: #7DD3FC;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+#volver-arriba:hover {
+    text-decoration: underline;
+}
+
+#frase-pie {
+    margin: 13px 0 3px;
+    color: #EAF7FF;
+    font-weight: 700;
+}
+
+#derechos {
+    margin: 0;
+    color: #9DB2C5;
+    font-size: 0.78rem;
+}
+
+@media (max-width: 760px) {
+    #encabezado {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 6%;
+    }
+
+    #menu {
+        gap: 12px 16px;
+    }
+
+    #portada {
+        grid-template-columns: 1fr;
+        padding-top: 45px;
+    }
+
+    #tarjetas-habitats,
+    #bloques-datos {
+        grid-template-columns: 1fr;
+    }
+
+    #navegacion-paginas {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+

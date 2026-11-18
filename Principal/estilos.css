@@ -1,0 +1,547 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #BBEBFF;
+    color: #142B43;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.75;
+}
+
+#encabezado {
+    min-height: 76px;
+    padding: 12px max(6%, calc((100% - 1160px) / 2));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background: #071A33;
+    border-bottom: 1px solid rgba(125, 211, 252, 0.18);
+}
+
+#logotipo {
+    color: #8BDCF5;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+    font-size: 1.65rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+}
+
+#menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+#menu a {
+    color: #C5D9E8;
+    font-size: 0.88rem;
+    text-decoration: none;
+}
+
+#menu a:hover,
+#enlace-actual {
+    color: #7DD3FC !important;
+}
+
+#contenido {
+    width: min(1120px, 88%);
+    margin: 0 auto;
+}
+
+#portada {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 45px;
+    padding: 76px 0 70px;
+}
+
+#etiqueta-portada,
+#numero-seccion,
+#numero-caracteristicas,
+#numero-diversidad,
+#numero-estrategia,
+#numero-dimensiones,
+#numero-multimedia,
+#numero-temas {
+    color: #1685B8;
+    font-family: 'Century Gothic', 'Tw Cen MT', Arial, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+}
+
+#titulo-portada {
+    margin: 12px 0 18px;
+    color: #071A33;
+    font-family: 'Bell MT', 'Bell', Georgia, serif;
+    font-size: clamp(2.5rem, 5vw, 4.2rem);
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+}
+
+#resumen-portada {
+    max-width: 550px;
+    color: #5B7085;
+    font-size: 1.04rem;
+}
+
+#boton-explorar {
+    display: inline-block;
+    margin-top: 17px;
+    padding: 11px 19px;
+    border-radius: 6px;
+    background: #0B3157;
+    color: #FFFFFF;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+#boton-explorar:hover {
+    background: #155E91;
+}
+
+#portada-imagen {
+    padding: 12px;
+    border: 1px solid #D7E6F0;
+    border-radius: 14px;
+    background: #FFFFFF;
+    box-shadow: 0 18px 42px rgba(7, 26, 51, 0.09);
+}
+
+#portada-imagen2 {
+    padding: 12px;
+    border: 1px solid #D7E6F0;
+    border-radius: 14px;
+    background: #FFFFFF;
+    box-shadow: 0 18px 42px rgba(7, 26, 51, 0.09);
+    width: 600px;
+    max-width: 90%;
+    height: auto;
+    margin: 24px auto 0 auto; /* Sin margen inferior extra */
+}
+
+#dimensiones-estudio {
+    padding: 65px 0 20px 0; /* 65px arriba, solo 20px abajo */
+    border-top: 1px solid #D9E5EE;
+}
+
+#multimedia {
+    padding: 20px 0 70px 0; /* Solo 20px arriba, 70px abajo */
+    border-bottom: 1px solid #D9E5EE;
+}
+
+#imagen-oceano {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+}
+
+#pie-imagen-portada {
+    margin: 9px 0 0;
+    color: #718397;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-align: center;
+}
+
+#introduccion {
+    display: grid;
+    grid-template-columns: 0.75fr 1.25fr;
+    gap: 55px;
+    padding: 65px 0;
+    border-top: 1px solid #D9E5EE;
+}
+
+#titulo-introduccion,
+#titulo-caracteristicas,
+#titulo-diversidad-general,
+#titulo-estrategia-general,
+#titulo-dimensiones,
+#titulo-multimedia,
+#titulo-temas {
+    margin: 7px 0 18px;
+    color: #071A33;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', sans-serif;
+    font-size: clamp(1.8rem, 3vw, 2.55rem);
+    line-height: 1.2;
+    letter-spacing: -0.035em;
+}
+
+#texto-introduccion p,
+#diversidad-texto p,
+#estrategia p,
+#dimensiones-estudio p {
+    margin: 0 0 18px;
+    color: #40576D;
+}
+
+#cita-intro-1,
+#cita-intro-2,
+#cita-intro-3,
+#cita-intro-4,
+#cita-diversidad-1,
+#cita-estrategia-1,
+#cita-estrategia-2,
+#cita-dimensiones-1,
+#cita-dimensiones-2,
+#cita-dimensiones-3,
+#cita-dimensiones-4 {
+    display: inline;
+    padding: 1px 5px;
+    border-radius: 3px;
+    background: #ffffff;
+    color: #075985;
+    font-size: 0.91em;
+    font-weight: 600;
+    text-decoration-line: underline;
+    text-decoration-color: #0284C7;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+}
+
+#idea-clave {
+    margin-top: 24px;
+    padding: 20px 24px;
+    border-left: 4px solid #0284C7;
+    border-radius: 0 8px 8px 0;
+    background: #E8F4FA;
+}
+
+#titulo-idea-clave {
+    margin: 0 0 8px;
+    color: #0B3157;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+    font-size: 1.08rem;
+}
+
+#texto-idea-clave {
+    margin: 0 !important;
+    color: #24415C !important;
+    font-weight: 500;
+}
+
+#caracteristicas {
+    padding: 62px 0;
+    border-top: 1px solid #D9E5EE;
+}
+
+#encabezado-caracteristicas {
+    max-width: 680px;
+}
+
+#texto-caracteristicas {
+    color: #5B7085;
+}
+
+#tarjetas-caracteristicas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 28px;
+}
+
+#tarjeta-ambientes,
+#tarjeta-diversidad,
+#tarjeta-estrategia {
+    padding: 25px;
+    border: 1px solid #DCE8F1;
+    border-radius: 11px;
+}
+#tarjeta-ambientes {
+    background: #1565c0;
+}
+#tarjeta-diversidad {
+    background: #0d47a1;
+}
+#tarjeta-estrategia {
+    background: #1565c0;
+}
+
+
+#icono-ambientes,
+#icono-diversidad,
+#icono-estrategia {
+    color: #1685B8;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+}
+
+#titulo-ambientes,
+#titulo-diversidad,
+#titulo-estrategia {
+    margin: 10px 0 7px;
+    color: #ffffff;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+    font-size: 1.1rem;
+}
+
+#tarjeta-ambientes p,
+#tarjeta-diversidad p,
+#tarjeta-estrategia p {
+    margin: 0;
+    color: #b7b7b7;
+    font-size: 0.92rem;
+}
+
+#diversidad {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 48px;
+    padding: 65px 0;
+    border-top: 1px solid #D9E5EE;
+}
+
+#imagen-diversidad {
+    display: block;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 14px 35px rgba(7, 26, 51, 0.12);
+}
+
+#estrategia {
+    padding: 62px 8%;
+    border-radius: 14px;
+    background: #E8F3FA;
+}
+
+#estrategia p {
+    max-width: 900px;
+}
+
+#dimensiones-estudio {
+    padding: 65px 0;
+    border-top: 1px solid #D9E5EE;
+}
+
+#multimedia {
+    padding: 70px 0;
+    border-bottom: 1px solid #D9E5EE;
+}
+
+#texto-multimedia {
+    color: #62778B;
+}
+
+#bloque-audio,
+#bloque-video {
+    margin-top: 20px;
+    padding: 23px;
+    border: 1px solid #DCE8F1;
+    border-radius: 12px;
+    background: #FFFFFF;
+}
+
+#titulo-audio,
+#titulo-video {
+    margin: 0;
+    color: #0B3157;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+}
+
+#audio-texto p,
+#video-texto p {
+    margin: 4px 0 14px;
+    color: #62778B;
+    font-size: 0.9rem;
+}
+
+#reproductor-audio {
+    width: 100%;
+}
+/* Estilo exclusivo para #bloque-audio (no afecta a #bloque-video) */
+#bloque-audio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+#audio-contenido {
+    flex: 1;
+}
+
+
+#imagen-kyogre {
+    width: 130px;              /* Tamaño equilibrado junto al reproductor */
+    height: auto;
+    flex-shrink: 0;
+    image-rendering: pixelated; /* Mantiene los bordes del pixel art nítidos */
+}
+
+
+#reproductor-video {
+    display: block;
+    width: 100%;
+    max-width: 720px;        /* Limita el ancho para que no se estire tanto */
+    aspect-ratio: 16 / 9;    /* Fuerza la proporción panorámica estándar */
+    margin: 18px auto 0;     /* Centra el video dentro del recuadro blanco */
+    border-radius: 8px;
+    background: #071A33;
+    object-fit: cover;       /* Evita barras negras si el video o póster varía un poco */
+}
+
+
+#indice-temas {
+    padding: 70px 0;
+}
+
+#lista-temas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 28px;
+}
+
+#tema-uno,
+#tema-dos,
+#tema-tres {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 260px;
+    padding: 24px;
+    border: 1px solid #DCE8F1;
+    border-radius: 11px;
+    background: #FFFFFF;
+}
+
+#numero-tema-uno,
+#numero-tema-dos,
+#numero-tema-tres {
+    margin: 0;
+    color: #1685B8;
+    font-family: 'Century Gothic', 'Tw Cen MT', Arial, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+}
+
+#nombre-tema-uno,
+#nombre-tema-dos,
+#nombre-tema-tres {
+    margin: 13px 0 8px;
+    color: #0B3157;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.35;
+}
+
+#tema-uno p:not(#numero-tema-uno),
+#tema-dos p:not(#numero-tema-dos),
+#tema-tres p:not(#numero-tema-tres) {
+    color: #62778B;
+    font-size: 0.9rem;
+}
+
+#ir-tema-uno,
+#ir-tema-dos,
+#ir-tema-tres {
+    margin-top: auto;
+    color: #0879AE;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+#ir-tema-uno:hover,
+#ir-tema-dos:hover,
+#ir-tema-tres:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+#pie {
+    padding: 30px 6%;
+    background: #071A33;
+    color: #C5D9E8;
+    text-align: center;
+}
+
+#volver-presentacion {
+    color: #7DD3FC;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+#frase-pie {
+    margin: 13px 0 3px;
+    color: #EAF7FF;
+    font-weight: 700;
+}
+
+#nota-pie {
+    margin: 0;
+    color: #9DB2C5;
+    font-size: 0.78rem;
+}
+
+@media (max-width: 760px) {
+    #encabezado {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 15px 6%;
+    }
+
+    #menu {
+        gap: 12px 18px;
+    }
+
+    #portada,
+    #introduccion,
+    #diversidad {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    #portada {
+        padding-top: 48px;
+    }
+
+    #introduccion {
+        padding: 45px 0;
+    }
+
+    #tarjetas-caracteristicas,
+    #lista-temas {
+        grid-template-columns: 1fr;
+    }
+
+    #estrategia {
+        padding: 35px 25px;
+    }
+
+    #multimedia,
+    #indice-temas {
+        padding: 48px 0;
+    }
+}
+#figura-introduccion {
+    margin: 32px 0 0;
+}
+
+#imagen-introduccion {
+    display: block;
+    width: 100%;
+    max-width: 310px;
+    height: auto;
+    border-radius: 12px;
+}
+
+#pie-imagen-intro {
+    margin-top: 10px;
+    color: #4B637B;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+}
